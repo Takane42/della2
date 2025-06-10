@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  buildDir: 'nuxt-build',
+  // buildDir: 'nuxt-build',
 
   experimental: {
     scanPageMeta: 'after-resolve',
@@ -31,15 +31,9 @@ export default defineNuxtConfig({
   },
 
   image: {
-    dir: 'public/images',
-    staticFilename: '[name]-[hash][ext]',
-    // Add provider configuration
+    // Remove any path manipulation - use default settings
     provider: 'ipx',
-    // Base URL for serving images
     domains: ['localhost'],
-    alias: {
-      public: '~/public'
-    },
     format: ['webp', 'avif', 'jpg', 'png'],
     quality: 80,
     screens: {
